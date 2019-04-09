@@ -23,6 +23,17 @@
             </h:dataTable>
             
             
+            
+            
+        </h:form>
+        <h:form >
+            <h:dataTable value="#{controllerejemplo.getAllPadre()}" var="p">
+                <h:column><f:facet name="nombre">nombre</f:facet>
+                #{p.nombre}
+                </h:column>
+                
+            
+            </h:dataTable>
         </h:form>
     </h:body>
 </html>

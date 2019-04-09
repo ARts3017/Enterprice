@@ -3,6 +3,8 @@
   <persistence-unit name="Enterprice-ejbPU" transaction-type="JTA">
     <jta-data-source>jdbc/sample</jta-data-source>
     <class>Entity.Ejemplo</class>
+    <class>Entity.Padre</class>
+    <class>Entity.Hijo</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties/>
   </persistence-unit>

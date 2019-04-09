@@ -42,8 +42,8 @@ public class Hijo implements Serializable {
     @Column(name = "NOMBRE")
     private String nombre;
     
-    
-    @JoinColumn(name="Padre",referencedColumnName ="id",nullable=false)
+   
+    @JoinColumn(name="id_padre",nullable=false)
     @ManyToOne(optional=false)
     private Padre padre;
 

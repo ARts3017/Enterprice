@@ -6,7 +6,9 @@
 package Controller;
 
 import Entity.Ejemplo;
+import Entity.Padre;
 import Facade.FacadeEjemplo;
+import Facade.PadreFacade;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -24,6 +26,8 @@ public class Controllerejemplo implements Serializable {
     
     @EJB
     private FacadeEjemplo facade;
+    @EJB PadreFacade padre;
+    
     /**
      * Creates a new instance of Controllerejemplo
      */
@@ -36,6 +40,12 @@ public class Controllerejemplo implements Serializable {
         return facade.getAll();
         
     }
+    
+    public List<Padre> getAllPadre()
+    {
+        return padre.findAll();
+    }
+            
     
     
 }
